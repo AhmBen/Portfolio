@@ -1,0 +1,9 @@
+<div id="header">
+  <ul>
+    <ng-container *ngFor="let link of getListeLink()">
+      <li *ngIf="link.position=='header'">
+        <a id="{{ link.id }}" href="{{ link.url }}" (click)="selectedMenu(link)" [style.color]="getLinkSelected() == link ? 'red' : 'blue'">{{ link.name }}</a>
+      </li>
+    </ng-container>
+  </ul>
+</div>

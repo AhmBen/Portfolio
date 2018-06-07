@@ -1,0 +1,8 @@
+<div id="body" [ngSwitch]="getLinkSelectedId()">
+  <div *ngFor="let link of getListeLink()" >
+    <div id="{{ link.id }}" *ngSwitchCase="link.id">
+      <h1>{{ link.name }}</h1>
+      {{ link.contenu }} page {{ link.name }} 
+    </div>
+  </div>
+</div>
