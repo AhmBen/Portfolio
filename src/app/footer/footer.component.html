@@ -1,9 +1,10 @@
 <div id="footer">
-  <ul>
-    <ng-container *ngFor="let link of getListeLink()">
-      <li *ngIf="link.position=='footer'">
-        <a id="{{ link.id }}" href="{{ link.url }}" (click)="selectedMenu(link)" [style.color]="getLinkSelected() == link ? 'red' : 'blue'">{{ link.name }}</a>
-      </li>
-    </ng-container>
-  </ul>
+    <mat-toolbar color="primary" fxLayout='row' fxLayoutAlign='space-around center'> 
+        <!-- https://blog.thoughtram.io/angular/2017/05/23/custom-themes-with-angular-material.html -->
+        <ng-container *ngFor="let link of getListeLink()">          
+              <span  *ngIf="link.position=='footer'">
+                <a id="{{ link.id }}" href="{{ link.url }}" (click)="selectedMenu(link)" [style.color]="getLinkSelected() == link ? '#ccc' : 'white'">{{ link.name }}</a>
+              </span>
+        </ng-container>
+    </mat-toolbar> 
 </div>

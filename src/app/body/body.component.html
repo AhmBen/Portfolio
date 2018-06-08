@@ -1,4 +1,4 @@
-<div id="body" [ngSwitch]="getLinkSelectedId()">
+<div [ngSwitch]="getLinkSelectedId()">
   <div *ngFor="let link of getListeLink()" >
     <div id="{{ link.id }}" *ngSwitchCase="link.id">
       <h1>{{ link.name }}</h1>
